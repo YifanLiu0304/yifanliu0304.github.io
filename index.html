@@ -203,12 +203,8 @@
     .contact-links a:hover { color: var(--accent); }
 
     /* ─── Research ───────────────────────────────── */
-    .pub-list { list-style: none; }
-    .pub-item {
-      padding: 1.4rem 0;
-      border-top: 1px solid var(--border);
-    }
-    .pub-item:last-child { border-bottom: 1px solid var(--border); }
+    .pub-item { padding: 1.4rem 0; }
+
     .pub-meta {
       font-family: var(--mono);
       font-size: 0.88rem;
@@ -473,6 +469,15 @@
     }
 
 
+
+    .pub-item + .pub-item {
+      border-top: 1px solid var(--border);
+    }
+    .pub-list {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      list-style: none;
+    }
   </style>
 </head>
 <body>
@@ -589,7 +594,7 @@
 
       <li class="pub-item">
         <div class="pub-title">Kinetic externalities of electric vehicles</div>
-        <div class="pub-authors">With Kim, J.</div>
+        <div class="pub-authors">With Kim, J., and Wichman, C.</div>
         <div class="pub-actions">
           <button class="btn-abstract" onclick="toggleAbstract(this)">Abstract</button>
           <a class="btn-email" href="mailto:yliu3494@gatech.edu?subject=Request: Kinetic externalities paper">Email me for more details</a>
@@ -624,7 +629,8 @@
         <div class="abstract-text">This paper develops a cross-lingual deep learning framework to analyze user-generated reviews of EV charging stations across multiple languages. Applied to a large dataset of charger reviews, the model accurately classifies reliability failures and reveals systemic patterns in charging infrastructure quality, with implications for policy and investment in EV infrastructure.</div>
       </li>
 
-              <div class="pub-title">Machine learning discovery of regional and social disparities in electric vehicle charging reliability with GPT-5</div>
+      <li class="pub-item">
+        <div class="pub-title">Machine learning discovery of regional and social disparities in electric vehicle charging reliability with GPT-5</div>
         <div class="pub-authors"><strong>Liu, Y.</strong>, Snyder, L., and Asensio, O. I.</div>
         <div class="pub-meta" style="margin-top:0.2rem;"><em>NeurIPS 2025 — Climate Change AI Workshop</em> (Papers Track)</div>
         <div class="pub-actions">
@@ -687,12 +693,9 @@
         <div class="abstract-text">Zero-emissions vehicle policies have been increasingly focused on the deployment and development of electric vehicle (EV) charging infrastructure. One fundamental barrier is the lack of common technology standards which has led to poor data interoperability between networks. In this article, we use machine learning to aggregate citizen-generated data to identify large-scale consumer issues related to infrastructure service provision in the context of electrification in the global transportation sector. Our dataset includes 407,051 publicly-accessible user reviews at 56,291 EV charging stations across the U.S., Europe, and East and Southeast Asia from 2010 to 2020. We employ transformer-based natural language processing (NLP) methods to classify topics of discussion from EV users in charging stations globally. We find evidence that the largest closed network Tesla provides EV consumers with better charging service reliability across regions than non-networked stations.</div>
       </li>
 
-      <li class="pub-item">
-
-
     </ul>
 
-    <p style="margin-top:1.5rem;">
+    <p style="margin-top:1.5rem; border-top:none;">
       Publication list on <a href="https://scholar.google.com/citations?user=CgatFvoAAAAJ&hl=en" target="_blank">Google Scholar →</a>
     </p>
   </div>

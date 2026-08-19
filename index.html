@@ -782,7 +782,7 @@
         Download full CV (PDF)
       </a>
       <div style="margin-top:1.5rem; border:1px solid var(--border); border-radius:4px; overflow:hidden;">
-        <iframe src="CV_YifanLiu.pdf" width="100%" height="780px" style="display:block; border:none;" title="Yifan Liu CV"></iframe>
+        <iframe id="cvFrame" data-src="CV_YifanLiu.pdf" width="100%" height="780px" style="display:block; border:none;" title="Yifan Liu CV"></iframe>
       </div>
   </div>
   </div><!-- /cvContent -->
@@ -906,6 +906,8 @@ function toggleAbstract(btn) {
           content.style.display = 'block';
           content.style.opacity = '0';
           content.style.transition = 'opacity 0.5s';
+          var frame = document.getElementById('cvFrame');
+          if (frame && !frame.src) { frame.src = frame.getAttribute('data-src'); }
           setTimeout(function() { content.style.opacity = '1'; }, 30);
         }, 500);
       }, 900);
